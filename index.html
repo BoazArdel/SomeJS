@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myTimer">
+<head>
+    <title>Clock!</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+    
+    <script src="timeCtrl.js"></script>
+    <script src="letterCtrl.js"></script>
+
+</head>
+<body>
+    <div ng-controller="timerCtrl">
+            <h1> Clock = {{time}}</h1>
+            <button ng-click="increase()"> increase!</button>
+    </div>
+    <div ng-controller="letterCtrl">
+            <h1> NewName = {{namer}},Current:{{text}}</h1>
+            <label>
+                Enter Name:
+                <input ng-model="text" name="text">
+            </label>
+            <button ng-click="change()"> change!</button>
+
+    </div>
+</body>
+</html>
