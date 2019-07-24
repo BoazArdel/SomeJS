@@ -1,41 +1,25 @@
 <!DOCTYPE html>
-<html ng-app="myTimer">
+<html ng-app="dataApp">
 <head>
     <title>Clock!</title>
-    <script src="angular.js"></script>
-    <script src="bootstrap.js"></script>
-    
-    <script src="timeCtrl.js"></script>
-    <script src="letterCtrl.js"></script>
-    <script src="personCtrl.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="angular.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+    <script src="parentCtrl.js"></script>
 </head>
-<body>
-    <div ng-controller="timerCtrl">
-            <h1> Clock = {{time}}</h1>
-            <button ng-click="increase()"> increase!</button>
+<body >
+
+    <div ng-controller="parentCtrl">
+        <p ng-class = "getClass()">Name : <input type="text" ng-model="name" ng-class="getClass()"></p>
+        <p ng-class = "getClass()">email : <input type="text" ng-model="email" ng-class="getClass()"></p>
+        <p ng-class = "getClass()">age : <input type="text" ng-model="age" ng-class="getClass()"></p>
     </div>
-    <div ng-controller="letterCtrl">
-            <h1> NewName = {{namer}},Current:{{text}}</h1>
-            <label>
-                Enter Name:
-                <input ng-model="text" name="text">
-            </label>
-            <button ng-click="change()"> change!</button>
-    <div ng-controller="personCtrl">
-            <h1> Person = {{boaz | json}}</h1>
-            <label>
-                Enter Name:
-                <input type="text" ng-model="boaz.name">
-            </label>
-            <label>
-                Enter age:
-                <input type="text" ng-model="boaz.age">
-            </label>
-            <label>
-                Enter pass:
-                <input type="text" ng-model="boaz.pass">
-            </label> 
-    </div>
+
+    
+    <br>
 </body>
 </html>

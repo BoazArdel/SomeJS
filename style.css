@@ -1,17 +1,19 @@
-body {
-    background-color: lightblue;
-  }
-  
-  h1 {
-    color: white;
-    text-align: center;
-  }
-  
-  p {
-    font-family: verdana;
-    font-size: 20px;
-  }
-  
-  .name1 {
-    color: blue;
-  }
+.green {
+    color : green;
+    border-color : green
+
+}
+
+.red {
+    color : red;
+    border-color : red
+}
+.blue {
+    color : blue;
+    border-color : blue
+}
+
+.orange {
+    color : orange;
+    border-color : orange
+}
