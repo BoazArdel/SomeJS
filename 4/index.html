@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Repeat!!</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+
+    <script src="parentCtrl.js"></script>
+    <script src="Mobile.js"></script>
+</head>
+<body >
+
+    <div ng-controller="parentCtrl">
+
+        <p>{{devices | json}}</p>
+            
+        <p ng-repeat="m in devices"> Name: <b>{{m.model}}</b> Color: <b>{{m.color}}</b> Price: <b>{{m.price}}</b></p>
+
+        <table border="1">
+            <tr style="background:lightyellow ; padding: 10px">
+                <th>#</th>
+                <th>MODEL</th>
+                <th>COLOR</th>
+                <th>PRICE</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="m in devices">
+                <td> {{$index}} </td>
+                <td>{{m.model}}</td>
+                <td>{{m.color}}</td>
+                <td>{{m.price}}</td>
+                <td><button ng-click="del($index)">X</button></td>
+                <button ng-click="sort()">Sort</button>
+            </tr>
+        </table>
+
+        <div>
+            <input type="text" ng-model="model" placeholder="Enter Model"/> 
+            <input type="text" ng-model="color" placeholder="Enter Color"/> 
+            <input type="text" ng-model="price" placeholder="Enter Price"/> 
+        </div>
+        <button ng-click="add()"> Add Device</button>
+        <p>ID = <input type="text"/></p>
+        <button >Update Device</button>
+
+
+    </div>
+    <br>
+</body>
+</html>
