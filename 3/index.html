@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myTimer">
+<head>
+    <title>Clock!</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+    
+    <script src="calcCtrl.js"></script>
+    <script src="displayCtrl.js"></script>
+
+
+</head>
+<body>
+    <div ng-controller="calcCtrl">
+        <button ng-click="change1()">Change X</button>
+        <h1> X = {{objNumber.x}}</h1>
+        <button ng-click="change2()">Change Y</button>
+        <h1> Y = {{objNumber.y}}</h1>
+        <h1> Z = {{objNumber.y+objNumber.x}}</h1>
+        <input type="text" ng-model="objNumber.name" placeholder="Enter your name"/>
+    </div>
+    <div ng-controller="displayCtrl">
+        <h1>------------------------------------------</h1>
+        <h1> Z = {{myobj.x+myobj.y}}</h1>
+    </div>
+</body>
+</html>
