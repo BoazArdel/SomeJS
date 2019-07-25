@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Clock!</title>
+    <script src="angular.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+    <script src="parentCtrl.js"></script>
+    <script src="globalconst.service.js"></script>
+    <script src="logic.service.js"></script>
+
+</head>
+<body >
+
+    <div ng-controller="parentCtrl">
+
+        <input type="text" ng-model="id" placeholder="Enter ID:"/>
+        <button ng-click="getID()"> Find ID</button> 
+        
+        <p>{{extracted.title}}</p>
+        <p>-------------------------</p>
+        <p>{{todos}}</p>
+    </div>
+
+    
+    <br>
+</body>
+</html>
