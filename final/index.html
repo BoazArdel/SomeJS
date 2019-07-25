@@ -14,17 +14,7 @@
 <body >
 
     <div ng-controller="parentCtrl">
-
-
-        <button ng-click="num(0)">{{X[0]}}</button>
-        <button ng-click="num(1)">{{X[1]}}</button>
-        <button ng-click="num(2)">{{X[2]}}</button>
-        <button ng-click="num(3)">{{X[3]}}</button>
-        <button ng-click="num(4)">{{X[4]}}</button>
-        <button ng-click="num(5)">{{X[5]}}</button>
-        <button ng-click="num(6)">{{X[6]}}</button>
-        <button ng-click="num(7)">{{X[7]}}</button>
-
+        <button ng-repeat="m in X track by $index" ng-click="num($index)">{{X[$index]}}</button>
     </div>
     <div ng-controller="secondCtrl">
         <p>Guesees:{{G.num_of_tries}}</p>
